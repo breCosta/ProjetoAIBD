@@ -1,0 +1,47 @@
+﻿@page "/"
+
+@using ProjetoBD.Data
+@using ProjetoBD.Model
+
+@inject NavigationManager Navigation
+@inject LoginService LoginService
+@inject CandidatoService CandidatoService
+
+<div class="container">
+    <h3>Login</h3>
+
+    @if (loginInvalido)
+    {
+        <p class="error-message">E-mail não encontrado!</p>
+    }
+
+    <EditForm Model="loginModel" OnValidSubmit="VerificarEmail">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div>
+            <label for="email">Email:</label>
+            @*<InputText id="email" @bind-Value="loginModel.Email" class="custom-input" />*@
+            <InputText id="email" @bind-Value="loginModel.Email" style="width: 100%; padding: 10px; border: 1px solid; border-radius: 8px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; color: #333;" />
+        </div>
+
+        <button type="submit">Login</button>
+    </EditForm>
+</div>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+    private bool loginInvalido;
+
+    private async Task VerificarEmail()
+    {
+        var candidato = await LoginService.GetCandidatoByEmail(loginModel.Email);
+        loginInvalido = (candidato == null);
+
+        if (!loginInvalido)
+        {
+            CandidatoService.Candidato = candidato;
+            Navigation.NavigateTo("/candidato");
+        }
+    }
+}

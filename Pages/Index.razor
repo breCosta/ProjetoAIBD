@@ -1,0 +1,27 @@
+﻿@page "/candidato"
+
+@using ProjetoBD.Data
+
+@inject CandidatoService CandidatoService
+
+<h3>Informações do Candidato</h3>
+
+@if (CandidatoService.Candidato != null)
+{
+    <div class="candidate-info">
+        <h4>@CandidatoService.Candidato.NomeCandidato</h4>
+        <p><strong>Data de Nascimento:</strong> @CandidatoService.Candidato.DtaNasc</p>
+        <p><strong>Email:</strong> @CandidatoService.Candidato.Contato.Email</p>
+        <p><strong>Telefone:</strong> @CandidatoService.Candidato.Contato.Telefone</p>
+        <p><strong>Rua:</strong> @CandidatoService.Candidato.Endereço.Rua</p>
+        <p><strong>Bairro:</strong> @CandidatoService.Candidato.Endereço.Bairro</p>
+        <p><strong>Cidade:</strong> @CandidatoService.Candidato.Endereço.Cidade</p>
+        <p><strong>Estado:</strong> @CandidatoService.Candidato.Endereço.Estado</p>
+        <p><strong>CEP:</strong> @CandidatoService.Candidato.Endereço.CEP</p>
+    </div>
+}
+else
+{
+    <p>Carregando informações...</p>
+}
+

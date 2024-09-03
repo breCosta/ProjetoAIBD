@@ -1,0 +1,41 @@
+.container[b-pvcqljuz12] {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3[b-pvcqljuz12] {
+    margin-top: 0;
+    color: #333;
+}
+
+label[b-pvcqljuz12] {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+button[b-pvcqljuz12] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+    button:hover[b-pvcqljuz12] {
+        background-color: #0056b3;
+    }
+
+.error-message[b-pvcqljuz12] {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

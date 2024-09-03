@@ -1,0 +1,200 @@
+/* _content/ProjetoBD/Pages/Index.razor.rz.scp.css */
+.candidate-info[b-qogu0cgyrb] {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.candidate-info h4[b-qogu0cgyrb] {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.candidate-info p[b-qogu0cgyrb] {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.candidate-info strong[b-qogu0cgyrb] {
+    color: #555;
+}
+/* _content/ProjetoBD/Pages/Login.razor.rz.scp.css */
+.container[b-pvcqljuz12] {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3[b-pvcqljuz12] {
+    margin-top: 0;
+    color: #333;
+}
+
+label[b-pvcqljuz12] {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+button[b-pvcqljuz12] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+    button:hover[b-pvcqljuz12] {
+        background-color: #0056b3;
+    }
+
+.error-message[b-pvcqljuz12] {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+/* _content/ProjetoBD/Shared/MainLayout.razor.rz.scp.css */
+.page[b-1df0wumruc] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-1df0wumruc] {
+    flex: 1;
+}
+
+.sidebar[b-1df0wumruc] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-1df0wumruc] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-1df0wumruc]  a, .top-row .btn-link[b-1df0wumruc] {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+    }
+
+    .top-row a:first-child[b-1df0wumruc] {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-1df0wumruc] {
+        display: none;
+    }
+
+    .top-row.auth[b-1df0wumruc] {
+        justify-content: space-between;
+    }
+
+    .top-row a[b-1df0wumruc], .top-row .btn-link[b-1df0wumruc] {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-1df0wumruc] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-1df0wumruc] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-1df0wumruc] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row[b-1df0wumruc], article[b-1df0wumruc] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* _content/ProjetoBD/Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-78v112a3e9] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-78v112a3e9] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-78v112a3e9] {
+    font-size: 1.1rem;
+}
+
+.oi[b-78v112a3e9] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-78v112a3e9] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-78v112a3e9] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-78v112a3e9] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-78v112a3e9]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-78v112a3e9]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-78v112a3e9]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-78v112a3e9] {
+        display: none;
+    }
+
+    .collapse[b-78v112a3e9] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
